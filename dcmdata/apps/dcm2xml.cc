@@ -348,6 +348,9 @@ int main(int argc, char *argv[])
         cmd.addOption("--load-short",         "-M",     "do not load very long values (default)");
         cmd.addOption("--max-read-length",    "+R",  1, "[k]bytes: integer (4..4194302, default: 4)",
                                                         "set threshold for long values to k kbytes");
+      cmd.addSubGroup("handling of wrong delimitation items:");
+        cmd.addOption("--use-delim-items",     "-rd",    "use delimitation items from dataset (default)");
+        cmd.addOption("--replace-wrong-delim", "+rd",    "replace wrong sequence/item delimitation items");
     cmd.addGroup("processing options:");
       cmd.addSubGroup("specific character set:");
         cmd.addOption("--charset-require",    "+Cr",    "require declaration of extended charset (def.)");
@@ -446,6 +449,17 @@ int main(int argc, char *argv[])
             opt_loadIntoMemory = OFTrue;
         if (cmd.findOption("--load-short"))
             opt_loadIntoMemory = OFFalse;
+        cmd.endOptionBlock();
+
+        cmd.beginOptionBlock();
+        if (cmd.findOption("--use-delim-items"))
+        {
+            dcmReplaceWrongDelimitationItem.set(OFFalse);
+        }
+        if (cmd.findOption("--replace-wrong-delim"))
+        {
+            dcmReplaceWrongDelimitationItem.set(OFTrue);
+        }
         cmd.endOptionBlock();
 
         /* processing options */

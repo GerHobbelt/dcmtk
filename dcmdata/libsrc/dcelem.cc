@@ -1150,6 +1150,9 @@ OFCondition DcmElement::read(DcmInputStream &inStream,
         errorFlag = EC_IllegalCall;
     else
     {
+        if (getTransferState() == ERW_init)
+            setFileOffset(inStream.tell());
+
         /* if this is not an illegal call, go ahead and create a DcmXfer */
         /* object based on the transfer syntax which was passed */
         DcmXfer inXfer(ixfer);
@@ -1571,6 +1574,8 @@ void DcmElement::writeXMLStartTag(STD_NAMESPACE ostream &out,
         out << " vm=\"" << getVM() << "\"";
         /* value length in bytes = 0..max */
         out << " len=\"" << getLengthField() << "\"";
+        /* offset in bytes from beginning of file */
+        out << " offset=\"" << getFileOffset() << "\"";
         /* tag name (if known and not suppressed) */
         if (!(flags & DCMTypes::XF_omitDataElementName))
             out << " name=\"" << OFStandard::convertToMarkupString(getTagName(), xmlString) << "\"";

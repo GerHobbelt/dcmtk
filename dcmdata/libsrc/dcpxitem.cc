@@ -250,6 +250,8 @@ OFCondition DcmPixelItem::writeXML(STD_NAMESPACE ostream &out,
         out << "<pixel-item";
         /* value length in bytes = 0..max */
         out << " len=\"" << getLengthField() << "\"";
+        /* offset in bytes from beginning of file */
+        out << " offset=\"" << getFileOffset() << "\"";
         /* value loaded = no (or absent)*/
         if (!valueLoaded())
             out << " loaded=\"no\"";

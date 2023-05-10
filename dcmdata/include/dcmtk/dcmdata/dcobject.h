@@ -650,6 +650,9 @@ class DCMTK_DCMDATA_EXPORT DcmObject
      *  @return current value of length field
      */
     Uint32 getLengthField() const { return Length; }
+    
+    Uint32 getFileOffset() const { return fOffset; }
+    void setFileOffset(Uint32 val) { fOffset = val; }
 
  protected:
 
@@ -818,6 +821,9 @@ class DCMTK_DCMDATA_EXPORT DcmObject
 
     /// the length of this attribute as read from stream, may be undefined length
     Uint32 Length;
+    
+    /// the element value offset in source file
+    Uint32 fOffset;
 
     /// transfer state during read and write operations
     E_TransferState fTransferState;
