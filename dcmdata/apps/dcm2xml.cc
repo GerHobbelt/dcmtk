@@ -82,6 +82,8 @@ static OFCondition checkCharacterSet(const char *ifname,
                 encString = "ISO-8859-7";
             else if (csetString == "ISO_IR 138")
                 encString = "ISO-8859-8";
+            else if (csetString == "ISO 2022 IR 138")
+                encString = "ISO-8859-8";
             else if (csetString == "ISO_IR 148")
                 encString = "ISO-8859-9";
             else if (csetString == "ISO_IR 203")
@@ -154,6 +156,8 @@ static OFCondition checkCharacterSet(const char *ifname,
                     else if (csetString == "ISO_IR 126")
                         encString = "ISO-8859-7";
                     else if (csetString == "ISO_IR 138")
+                        encString = "ISO-8859-8";
+                    else if (csetString == "ISO 2022 IR 138")
                         encString = "ISO-8859-8";
                     else if (csetString == "ISO_IR 148")
                         encString = "ISO-8859-9";
