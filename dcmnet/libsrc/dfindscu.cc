@@ -585,6 +585,8 @@ OFBool DcmFindSCU::writeToXMLFile(const char* ofname, DcmDataset *dataset)
                 encString = "ISO-8859-7";
             else if (csetString == "ISO_IR 138")
                 encString = "ISO-8859-8";
+            else if (csetString == "ISO 2022 IR 138")
+                encString = "ISO-8859-8";
             else if (csetString == "ISO_IR 148")
                 encString = "ISO-8859-9";
             else if (csetString == "ISO_IR 203")

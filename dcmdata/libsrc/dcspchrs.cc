@@ -302,6 +302,8 @@ OFCondition DcmSpecificCharacterSet::selectCharacterSetWithoutCodeExtensions()
         fromEncoding = "ISO-8859-7";
     else if (SourceCharacterSet == "ISO_IR 138")    // Hebrew
         fromEncoding = "ISO-8859-8";
+    else if (SourceCharacterSet == "ISO 2022 IR 138")    // Hebrew
+        fromEncoding = "ISO-8859-8";
     else if (SourceCharacterSet == "ISO_IR 148")    // Latin alphabet No. 5
         fromEncoding = "ISO-8859-9";
     else if (SourceCharacterSet == "ISO_IR 203")    // Latin alphabet No. 9
