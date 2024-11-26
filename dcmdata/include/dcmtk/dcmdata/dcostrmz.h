@@ -151,7 +151,7 @@ private:
   DcmConsumer *current_;
 
   /// pointer to struct z_stream object containing the zlib status
-  z_streamp zstream_;
+  zng_streamp zstream_;
 
   /// status
   OFCondition status_;

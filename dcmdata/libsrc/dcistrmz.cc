@@ -33,21 +33,21 @@ OFGlobal<OFBool> dcmZlibExpectRFC1950Encoding(OFFalse);
 
 // helper methods to fix old-style casts warnings
 BEGIN_EXTERN_C
-static int OFinflateInit(z_stream* const stream)
+static int OFinflateInit(zng_stream* const stream)
 {
-  return inflateInit(stream);
+  return zng_inflateInit(stream);
 }
 
-static int OFinflateInit2(z_stream* const stream)
+static int OFinflateInit2(zng_stream* const stream)
 {
-  return inflateInit2(stream, -MAX_WBITS);
+  return zng_inflateInit2(stream, -MAX_WBITS);
 }
 END_EXTERN_C
 
 DcmZLibInputFilter::DcmZLibInputFilter()
 : DcmInputFilter()
 , current_(NULL)
-, zstream_(new z_stream)
+, zstream_(new zng_stream)
 , status_(EC_MemoryExhausted)
 , eos_(OFFalse)
 , inputBuf_(new unsigned char[DCMZLIBINPUTFILTER_BUFSIZE])
@@ -104,7 +104,7 @@ DcmZLibInputFilter::~DcmZLibInputFilter()
 {
   if (zstream_)
   {
-    inflateEnd(zstream_); // discards any unprocessed input and does not flush any pending output
+		zng_inflateEnd(zstream_); // discards any unprocessed input and does not flush any pending output
     delete zstream_;
   }
   delete[] inputBuf_;
@@ -303,7 +303,7 @@ offile_off_t DcmZLibInputFilter::decompress(const void *buf, offile_off_t buflen
   {
     zstream_->next_in = OFstatic_cast(Bytef *, inputBuf_ + inputBufStart_);
     zstream_->avail_in = OFstatic_cast(uInt, numBytes);
-    astatus = inflate(zstream_, 0);
+    astatus = zng_inflate(zstream_, 0);
 
     if (astatus == Z_OK || astatus == Z_BUF_ERROR) { /* everything OK */ }
     else if (astatus == Z_STREAM_END)
@@ -348,7 +348,7 @@ offile_off_t DcmZLibInputFilter::decompress(const void *buf, offile_off_t buflen
       {
         zstream_->next_in = OFstatic_cast(Bytef *, inputBuf_);
         zstream_->avail_in = OFstatic_cast(uInt, inputBufCount_);
-        astatus = inflate(zstream_, 0);
+        astatus = zng_inflate(zstream_, 0);
 
         if (astatus == Z_OK || astatus == Z_BUF_ERROR) { /* everything OK */ }
         else if (astatus == Z_STREAM_END)

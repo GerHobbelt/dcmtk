@@ -39,7 +39,7 @@ OFGlobal<int> dcmZlibCompressionLevel(Z_DEFAULT_COMPRESSION);
 
 // helper method to fix old-style casts warnings
 BEGIN_EXTERN_C
-static int OFdeflateInit(z_stream* const stream, int level)
+static int OFdeflateInit(zng_stream* const stream, int level)
 {
 #ifdef ZLIB_ENCODE_RFC1950_HEADER
   /* create deflated ZLIB format instead of deflated bitstream format
@@ -47,10 +47,10 @@ static int OFdeflateInit(z_stream* const stream, int level)
    * THE RESULTING BITSTREAM IS NOT DICOM COMPLIANT!
    * Use only for testing, and use with care.
    */
-  return deflateInit(stream, level);
+  return zng_deflateInit(stream, level);
 #else
   /* windowBits is passed < 0 to suppress zlib header */
-  return deflateInit2(stream, level, Z_DEFLATED, -MAX_WBITS, DEF_MEM_LEVEL, Z_DEFAULT_STRATEGY);
+  return zng_deflateInit2(stream, level, Z_DEFLATED, -MAX_WBITS, DEF_MEM_LEVEL, Z_DEFAULT_STRATEGY);
 #endif
 }
 END_EXTERN_C
@@ -58,7 +58,7 @@ END_EXTERN_C
 DcmZLibOutputFilter::DcmZLibOutputFilter()
 : DcmOutputFilter()
 , current_(NULL)
-, zstream_(new z_stream)
+, zstream_(new zng_stream)
 , status_(EC_MemoryExhausted)
 , flushed_(OFFalse)
 , inputBuf_(new unsigned char[DCMZLIBOUTPUTFILTER_BUFSIZE])
@@ -88,7 +88,7 @@ DcmZLibOutputFilter::~DcmZLibOutputFilter()
 {
   if (zstream_)
   {
-    deflateEnd(zstream_); // discards any unprocessed input and does not flush any pending output
+		zng_deflateEnd(zstream_); // discards any unprocessed input and does not flush any pending output
     delete zstream_;
   }
   delete[] inputBuf_;
@@ -240,7 +240,7 @@ offile_off_t DcmZLibOutputFilter::compress(const void *buf, offile_off_t buflen,
     {
       zstream_->next_out = OFstatic_cast(Bytef *, outputBuf_ + outputBufStart_ + outputBufCount_);
       zstream_->avail_out = OFstatic_cast(uInt, DCMZLIBOUTPUTFILTER_BUFSIZE - (outputBufStart_ + outputBufCount_));
-      zstatus = deflate(zstream_, (finalize ? Z_FINISH : 0));
+      zstatus = zng_deflate(zstream_, (finalize ? Z_FINISH : 0));
 
       if (zstatus == Z_OK || zstatus == Z_BUF_ERROR) { /* everything OK */ }
       else if (zstatus == Z_STREAM_END) flushed_ = OFTrue;
@@ -260,7 +260,7 @@ offile_off_t DcmZLibOutputFilter::compress(const void *buf, offile_off_t buflen,
     {
       zstream_->next_out = OFstatic_cast(Bytef *, outputBuf_ + (outputBufStart_ + outputBufCount_ - DCMZLIBOUTPUTFILTER_BUFSIZE));
       zstream_->avail_out = OFstatic_cast(uInt, DCMZLIBOUTPUTFILTER_BUFSIZE - outputBufCount_);
-      zstatus = deflate(zstream_, (finalize ? Z_FINISH : 0));
+      zstatus = zng_deflate(zstream_, (finalize ? Z_FINISH : 0));
 
       if (zstatus == Z_OK || zstatus == Z_BUF_ERROR) { /* everything OK */ }
       else if (zstatus == Z_STREAM_END) flushed_ = OFTrue;
