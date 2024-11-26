@@ -1836,10 +1836,10 @@ static long gethostid(void)
 #ifdef HAVE_WINDOWS_H
     OFCRC32 crc;
     /* get some processor specific information in addition to the MAC address */
-    SYSTEM_INFO systemInfo;
+		SYSTEM_INFO systemInfo = {0};
     GetSystemInfo(&systemInfo);
     /* get volume information of the system drive */
-    char systemDrive[MAX_PATH];
+		char systemDrive[MAX_PATH] = "";
     DWORD serialNumber = 0;
     if (GetSystemDirectoryA(systemDrive, OFstatic_cast(UINT, sizeof(systemDrive))) >= 0)
     {
