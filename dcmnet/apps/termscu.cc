@@ -33,7 +33,7 @@
 #include "dcmtk/ofstd/ofstd.h"
 
 #ifdef WITH_ZLIB
-#include <zlib.h>
+#include <zlib-ng.h>
 #endif
 
 // ----------------------------------------------------------------------------

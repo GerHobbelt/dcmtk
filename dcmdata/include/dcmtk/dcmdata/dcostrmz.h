@@ -29,7 +29,7 @@
 #include "dcmtk/dcmdata/dcostrma.h" /* for DcmOutputFilter */
 
 BEGIN_EXTERN_C
-#include <zlib.h>
+#include <zlib-ng.h>
 END_EXTERN_C
 
 /** global flag defining the compression level for zlib (deflate) compression.

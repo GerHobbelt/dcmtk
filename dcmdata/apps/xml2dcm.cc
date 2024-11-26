@@ -31,7 +31,7 @@
 #include "dcmtk/dcmdata/dcmxml/xml2dcm.h"
 
 #ifdef WITH_ZLIB
-#include <zlib.h>                     /* for zlibVersion() */
+#include <zlib-ng.h>                     /* for zlibVersion() */
 #endif
 
 #define OFFIS_CONSOLE_APPLICATION "xml2dcm"

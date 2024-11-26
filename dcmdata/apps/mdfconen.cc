@@ -33,7 +33,7 @@
 
 #ifdef WITH_ZLIB
 BEGIN_EXTERN_C
-#include <zlib.h>
+#include <zlib-ng.h>
 END_EXTERN_C
 #endif
 

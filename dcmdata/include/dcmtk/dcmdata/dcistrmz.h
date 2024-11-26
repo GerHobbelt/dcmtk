@@ -29,7 +29,7 @@
 #include "dcmtk/dcmdata/dcistrma.h" /* for DcmInputFilter */
 
 BEGIN_EXTERN_C
-#include <zlib.h>
+#include <zlib-ng.h>
 END_EXTERN_C
 
 /** global flag defining the behaviour of the zlib decompressor.

@@ -42,7 +42,7 @@ END_EXTERN_C
 #include "dcmtk/ofstd/ofstd.h"
 
 #ifdef WITH_ZLIB
-#include <zlib.h>          /* for zlibVersion() */
+#include <zlib-ng.h>          /* for zlibVersion() */
 #endif
 
 #define OFFIS_CONSOLE_APPLICATION "dcmqrti"
