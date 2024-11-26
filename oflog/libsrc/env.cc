@@ -86,7 +86,7 @@ parse_bool (bool & val, tstring const & str)
     {
         iss.clear ();
         iss.seekg (0);
-        assert (iss);
+        assert (!!iss);
 
         long lval;
         iss >> lval;

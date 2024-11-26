@@ -271,7 +271,7 @@ void DcmJsonFormatPretty::increaseIndention()
 
 void DcmJsonFormatPretty::decreaseIndention()
 {
-    assert(m_IndentionLevel);
+    assert(m_IndentionLevel != 0);
     --m_IndentionLevel;
 }
 

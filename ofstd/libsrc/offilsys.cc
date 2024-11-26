@@ -499,7 +499,7 @@ OFdirectory_iterator::OFdirectory_iterator()
 OFdirectory_iterator::OFdirectory_iterator( const OFpath& path )
 : m_pEntry( new NativeDirectoryEntry( path ) )
 {
-    assert( m_pEntry );
+    assert( m_pEntry != nullptr );
     if( !m_pEntry->skipInvalidFiles() )
         m_pEntry.reset();
 }
@@ -533,7 +533,7 @@ OFBool OFdirectory_iterator::operator!=( const OFdirectory_iterator& rhs ) const
 
 OFdirectory_iterator& OFdirectory_iterator::operator++()
 {
-    assert( m_pEntry );
+    assert( m_pEntry != nullptr );
     if( !m_pEntry->next() || !m_pEntry->skipInvalidFiles() )
         m_pEntry.reset();
     return *this;
@@ -541,7 +541,7 @@ OFdirectory_iterator& OFdirectory_iterator::operator++()
 
 OFrvalue<OFdirectory_iterator_proxy> OFdirectory_iterator::operator++(int)
 {
-    assert( m_pEntry );
+    assert( m_pEntry != nullptr);
     OFdirectory_iterator_proxy proxy( *m_pEntry );
     ++(*this);
     return proxy;
@@ -549,12 +549,12 @@ OFrvalue<OFdirectory_iterator_proxy> OFdirectory_iterator::operator++(int)
 
 OFdirectory_iterator::pointer OFdirectory_iterator::operator->() const
 {
-    assert( m_pEntry );
+    assert( m_pEntry != nullptr);
     return m_pEntry.get();
 }
 
 OFdirectory_iterator::reference OFdirectory_iterator::operator*() const
 {
-    assert( m_pEntry );
+    assert( m_pEntry != nullptr);
     return *m_pEntry;
 }
