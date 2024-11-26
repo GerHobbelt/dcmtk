@@ -287,7 +287,7 @@ int main(int argc, char *argv[])
     }
 
     /* check for compatible libxml version */
-    LIBXML_TEST_VERSION
+		LIBXML_TEST_VERSION();
     /* initialize the XML library (only required for MT-safety) */
     xmlInitParser();
 
