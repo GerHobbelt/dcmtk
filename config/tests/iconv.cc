@@ -22,7 +22,7 @@
 
 int main()
 {
-    char input[2] = { '\366', '\0' };
+    const char input[2] = { '\366', '\0' };
     char output[8];
     iconv_t i = iconv_open( "ASCII", "ISO-8859-1" );
     if( (iconv_t)-1 != i )
@@ -31,7 +31,7 @@ int main()
 #ifdef LIBICONV_SECOND_ARGUMENT_CONST
         const
 #endif
-        char* in = input;
+        const char* in = input;
         char* out = output;
         size_t ins = 1;
         size_t outs = 8;
