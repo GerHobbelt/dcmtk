@@ -32,6 +32,13 @@
 
 #include "dcmtk/dcmimgle/didefine.h"
 
+// fix for MAX_BIS clash with zlib: make sure we've loaded zlib before we *re*define MAX_BITS further below!
+#ifdef WITH_ZLIB
+#include <zlib-ng.h>          /* for MAX_BITS */
+#endif
+
+#undef MAX_BITS
+
 extern DCMTK_DCMIMGLE_EXPORT OFLogger DCM_dcmimgleLogger;
 
 #define DCMIMGLE_TRACE(msg) OFLOG_TRACE(DCM_dcmimgleLogger, msg)
