@@ -42,6 +42,9 @@ END_EXTERN_C
 #include <winsock.h>
 #endif
 
+#undef max
+#undef min
+
 #define OFFILENAME_TO_OFSTRING(filename) \
     OFString(OFSTRING_GUARD(filename.getCharPointer()))
 
