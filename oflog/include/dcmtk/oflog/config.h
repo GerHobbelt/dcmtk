@@ -30,7 +30,7 @@
 
 #include "dcmtk/ofstd/ofstdinc.h"
 
-#ifdef oflog_EXPORTS
+#if defined(oflog_EXPORTS)
 #  define DCMTK_INSIDE_LOG4CPLUS
 #endif
 
