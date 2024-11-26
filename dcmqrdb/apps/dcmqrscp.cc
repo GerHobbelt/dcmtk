@@ -68,7 +68,7 @@ END_EXTERN_C
 #endif
 
 #ifdef WITH_ZLIB
-#include <zlib.h>                      /* for zlibVersion() */
+#include <zlib-ng.h>                      /* for zlibVersion() */
 #endif
 #ifdef DCMTK_ENABLE_CHARSET_CONVERSION
 #include "dcmtk/ofstd/ofchrenc.h"      /* for OFCharacterEncoding */

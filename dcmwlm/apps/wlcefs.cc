@@ -45,7 +45,7 @@
 #include "wlcefs.h"
 
 #ifdef WITH_ZLIB
-#include <zlib.h>        /* for zlibVersion() */
+#include <zlib-ng.h>        /* for zlibVersion() */
 #endif
 
 // ----------------------------------------------------------------------------

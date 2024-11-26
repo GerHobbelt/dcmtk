@@ -29,7 +29,7 @@
 #include "dcmtk/dcmdata/dcistrmz.h"    /* for dcmZlibExpectRFC1950Encoding */
 
 #ifdef WITH_ZLIB
-#include <zlib.h>        /* for zlibVersion() */
+#include <zlib-ng.h>        /* for zlibVersion() */
 #endif
 
 #define OFFIS_CONSOLE_APPLICATION "dcm2cda"
