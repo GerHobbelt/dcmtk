@@ -107,7 +107,7 @@ OFTEST_REGISTER(dcmsr_CMR_SRNumericMeasurementValueWithUnits_definedGroup);
 /* the following should be the last test case */
 OFTEST_REGISTER(dcmsr_cleanupContentMappingResource);
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcmsr_tests_main
 #endif
 
 OFTEST_MAIN("dcmsr")

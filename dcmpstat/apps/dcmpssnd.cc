@@ -66,7 +66,15 @@ static OFLogger dcmpssndLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_AP
 static char rcsid[] = "$dcmtk: " OFFIS_CONSOLE_APPLICATION " v"
   OFFIS_DCMTK_VERSION " " OFFIS_DCMTK_RELEASEDATE " $";
 
+#if !defined(BUILD_MONOLITHIC)   // messageClient global is already defined in dcmpsrcv.cpp
+
 DVPSIPCClient *messageClient  = NULL; // global pointer to IPC message client, if present
+
+#else
+
+extern DVPSIPCClient *messageClient; // global pointer to IPC message client, if present
+
+#endif
 
 /** sends a single DICOM instance over an association which must be already established.
  *  @param assoc DICOM network association
@@ -321,7 +329,7 @@ static OFCondition addAllStoragePresentationContexts(T_ASC_Parameters *params, i
 #define LONGCOL 12
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcmpssnd_main
 #endif
 
 extern "C"

@@ -80,7 +80,7 @@ enum DcmSignOperation
 #define LONGCOL 21
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcmsign_main
 #endif
 
 extern "C"
@@ -873,7 +873,7 @@ cleanup:
 #else /* WITH_OPENSSL */
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcmsign_main
 #endif
 
 extern "C"

@@ -53,7 +53,7 @@ static OFLogger xml2dcmLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APP
 #define LONGCOL 21
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_xml2dcm_main
 #endif
 
 extern "C"

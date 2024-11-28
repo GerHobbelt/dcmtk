@@ -198,7 +198,7 @@ static OFCondition renderFile(STD_NAMESPACE ostream &out,
 
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dsr2html_main
 #endif
 
 extern "C"

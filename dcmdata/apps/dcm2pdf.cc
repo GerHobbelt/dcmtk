@@ -86,7 +86,7 @@ static OFString replaceChars(const OFString &srcstr, const OFString &pattern, co
 #define LONGCOL 20
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcm2pdf_main
 #endif
 
 extern "C"

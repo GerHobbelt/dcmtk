@@ -26,7 +26,7 @@ OFTEST_REGISTER(dcmtls_scp_tls);
 OFTEST_REGISTER(dcmtls_scp_pool_tls);
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcmtls_tests_main
 #endif
 
 OFTEST_MAIN("dcmtls")

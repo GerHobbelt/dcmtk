@@ -90,7 +90,7 @@ static OFCondition writeFile(STD_NAMESPACE ostream &out,
 #define LONGCOL 20
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcm2json_main
 #endif
 
 extern "C"

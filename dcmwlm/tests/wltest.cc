@@ -129,7 +129,7 @@ queryWorklistDB(WlmDataSourceFileSystem& wdb,
 
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_wltest_main
 #endif
 
 extern "C"

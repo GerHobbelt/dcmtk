@@ -26,7 +26,7 @@ OFTEST_REGISTER(dcmect_huge_concat);
 OFTEST_REGISTER(dcmect_overflow);
 OFTEST_REGISTER(dcmect_roundtrip);
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcmect_tests_main
 #endif
 
 OFTEST_MAIN("dcmect")

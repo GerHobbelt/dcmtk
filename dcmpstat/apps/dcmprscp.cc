@@ -89,7 +89,7 @@ static void cleanChildren()
 #define LONGCOL 12
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcmprscp_main
 #endif
 
 extern "C"

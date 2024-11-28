@@ -164,7 +164,7 @@ checkUserIdentityResponse(T_ASC_Parameters *params);
 #define LONGCOL 19
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_storescu_main
 #endif
 
 extern "C"

@@ -493,7 +493,7 @@ static OFCondition startConversion(
 
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_img2dcm_main
 #endif
 
 extern "C"

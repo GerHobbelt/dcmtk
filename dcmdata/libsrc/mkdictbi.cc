@@ -108,7 +108,7 @@ printSimpleEntry(FILE* fout, const DcmDictEntry* e, OFBool& isFirst, OFBool& isP
 }
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_mkdictbi_main
 #endif
 
 extern "C"

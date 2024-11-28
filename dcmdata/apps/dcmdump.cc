@@ -141,7 +141,7 @@ static OFBool addPrintTagName(const char *tagName)
 
 // this macro either expands to main() or wmain()
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcmdump_main
 #endif
 
 DCMTK_MAIN_FUNCTION

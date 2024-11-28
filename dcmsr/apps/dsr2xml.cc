@@ -196,7 +196,7 @@ static OFCondition writeFile(STD_NAMESPACE ostream &out,
 
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dsr2xml_main
 #endif
 
 extern "C"

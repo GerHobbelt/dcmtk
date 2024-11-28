@@ -69,7 +69,7 @@ extern "C" void TI_signalHandler(int)
 }
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcmqrti_main
 #endif
 
 extern "C"

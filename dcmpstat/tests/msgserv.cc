@@ -90,7 +90,7 @@ static const char *applicationType(Uint32 i)
 #define LONGCOL 12
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_msgserv_main
 #endif
 
 extern "C"

@@ -48,7 +48,7 @@ static char rcsid[] = "$dcmtk: " OFFIS_CONSOLE_APPLICATION " v"
 #define LONGCOL 13
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcmmkcrv_main
 #endif
 
 extern "C"
@@ -400,5 +400,4 @@ int main(int argc, const char **argv)
     }
 
     return 0;
-
 }

@@ -674,7 +674,7 @@ static E_FileType getFileTypeByExtension(const char *fname)
 }
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcm2img_main
 #endif
 
 extern "C"

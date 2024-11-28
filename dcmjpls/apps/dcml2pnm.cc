@@ -23,7 +23,7 @@
 #include "dcmtk/ofstd/ofstub.h"
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcml2pnm_main
 #endif
 
 extern "C"

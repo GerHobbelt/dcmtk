@@ -108,7 +108,7 @@ printDefined(FILE* fout, const DcmDictEntry* e)
 }
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_mkdeftag_main
 #endif
 
 extern "C"

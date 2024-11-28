@@ -110,7 +110,7 @@ OFTEST_REGISTER(oflocale_charset);
 OFTEST_REGISTER(oficonvctl);
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_oficonv_tests_main
 #endif
 
 OFTEST_MAIN("oficonv")

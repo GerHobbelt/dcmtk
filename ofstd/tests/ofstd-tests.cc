@@ -105,7 +105,7 @@ OFTEST_REGISTER(ofstd_std_tuple);
 OFTEST_REGISTER(ofstd_std_vector);
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_ofstd_tests_main
 #endif
 
 OFTEST_MAIN("ofstd")

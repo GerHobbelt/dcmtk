@@ -207,7 +207,7 @@ void parseArguments(OFConsoleApplication& app, OFCommandLine& cmd,
 }
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcm2cda_main
 #endif
 
 extern "C"

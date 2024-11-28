@@ -217,7 +217,7 @@ addPresentationContext(T_ASC_Parameters *params,
 #define LONGCOL 21
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_movescu_main
 #endif
 
 extern "C"

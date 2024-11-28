@@ -418,7 +418,7 @@ static void dumpPresentationState(DVPresentationState &ps)
 #define LONGCOL 13
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcmp2pgm_main
 #endif
 
 extern "C"

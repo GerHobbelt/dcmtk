@@ -63,7 +63,7 @@ const char *all_reports[num_reports] = {"mkreport",
 
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_mkreport_main
 #endif
 
 extern "C"

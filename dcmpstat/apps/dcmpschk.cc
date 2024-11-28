@@ -914,7 +914,7 @@ static int checkfile(const char *filename)
 #define LONGCOL 12
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcmpschk_main
 #endif
 
 extern "C"

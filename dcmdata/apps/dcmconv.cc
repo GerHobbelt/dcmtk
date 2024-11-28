@@ -74,7 +74,7 @@ static DcmTagKey parseTagKey(const char *tagName)
 }
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcmconv_main
 #endif
 
 extern "C"

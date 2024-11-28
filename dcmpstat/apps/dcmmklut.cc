@@ -646,7 +646,7 @@ static OFCondition createLUT(const unsigned int numberOfBits,
 #define LONGCOL 14
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcmmklut_main
 #endif
 
 extern "C"

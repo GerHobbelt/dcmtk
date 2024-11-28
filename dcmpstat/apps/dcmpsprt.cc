@@ -103,7 +103,7 @@ static int addOverlay(const char *filename,
 #define LONGCOL 21
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcmpsprt_main
 #endif
 
 extern "C"

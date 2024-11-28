@@ -106,7 +106,7 @@ static void mangleAssociationProfileKey(OFString& key)
 }
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcmqrscp_main
 #endif
 
 extern "C"

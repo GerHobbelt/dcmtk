@@ -49,7 +49,7 @@ static OFLogger termscuLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APP
 // ----------------------------------------------------------------------------
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_termscu_main
 #endif
 
 extern "C"

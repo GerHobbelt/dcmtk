@@ -54,7 +54,7 @@ OFTEST_REGISTER(dcmnet_scu_sendNSETRequest_succeeds_and_sets_responsestatuscode_
 #endif // WITH_THREADS
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_dcmnet_tests_main
 #endif
 
 OFTEST_MAIN("dcmnet")

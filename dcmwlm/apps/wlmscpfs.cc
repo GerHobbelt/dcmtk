@@ -33,7 +33,7 @@
 #define OFFIS_CONSOLE_APPLICATION "wlmscpfs"
 
 #if defined(BUILD_MONOLITHIC)
-#define main oiio_XXXXXX_main
+#define main dcmtk_wlmscpfs_main
 #endif
 
 extern "C"
