@@ -28,6 +28,8 @@
 #include <winsock2.h>
 #include <iphlpapi.h>
 #include <ws2tcpip.h>
+
+#pragma comment(lib, "iphlpapi.lib")		// MSVC: making sure the appropriate system library is automatically linked in...
 #endif
 
 BEGIN_EXTERN_C

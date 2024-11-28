@@ -165,6 +165,9 @@ END_EXTERN_C
 #include <direct.h>      /* for _mkdir() */
 #include <lm.h>          /* for NetWkstaUserGetInfo */
 #include <ws2tcpip.h>    /* for struct sockaddr_in6 */
+
+#pragma comment(lib, "netapi32.lib")		// MSVC: making sure the appropriate system library is automatically linked in...
+
 #ifndef R_OK /* Windows defines access() but not the constants */
 #define W_OK 02 /* Write permission */
 #define R_OK 04 /* Read permission */
