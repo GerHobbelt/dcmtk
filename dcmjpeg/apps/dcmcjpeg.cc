@@ -37,6 +37,8 @@
 #include <zlib-ng.h>      /* for zlibVersion() */
 #endif
 
+#include "monolithic_examples.h"
+
 #define OFFIS_CONSOLE_APPLICATION "dcmcjpeg"
 
 static OFLogger dcmcjpegLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APPLICATION);

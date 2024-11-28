@@ -31,6 +31,8 @@
 #include "dcmtk/dcmimgle/digsdfn.h"
 #include "dcmtk/dcmimgle/diciefn.h"
 
+#include "monolithic_examples.h"
+
 #define OFFIS_CONSOLE_APPLICATION "dcmdspfn"
 
 static OFLogger dcmdspfnLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APPLICATION);

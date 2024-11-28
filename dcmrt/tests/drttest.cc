@@ -23,6 +23,8 @@
 
 #include "dcmtk/dcmdata/dcfilefo.h"
 
+#include "monolithic_examples.h"
+
 #define TEST_COPY_CONSTRUCTOR
 #define TEST_ASSIGNMENT_OPERATOR
 

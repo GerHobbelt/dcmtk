@@ -23,6 +23,8 @@
 
 #include "dcmtk/ofstd/oftest.h"
 
+#include "monolithic_examples.h"
+
 OFTEST_REGISTER(dcmnet_dimseDump_nullByte);
 OFTEST_REGISTER(dcmnet_dimseStatusClass);
 

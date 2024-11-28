@@ -74,6 +74,8 @@ END_EXTERN_C
 #include "dcmtk/ofstd/ofchrenc.h"      /* for OFCharacterEncoding */
 #endif
 
+#include "monolithic_examples.h"
+
 #ifndef OFFIS_CONSOLE_APPLICATION
 #define OFFIS_CONSOLE_APPLICATION "dcmqrscp"
 #endif

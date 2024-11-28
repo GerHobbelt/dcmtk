@@ -27,6 +27,8 @@
 #include "dcmtk/ofstd/ofconsol.h"
 #include "dcmtk/dcmdata/dcuid.h"    /* for dcmtk version name */
 
+#include "monolithic_examples.h"
+
 
 #define OFFIS_CONSOLE_APPLICATION "dconvlum"
 

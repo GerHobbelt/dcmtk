@@ -33,6 +33,8 @@
 #include <zlib-ng.h>                     /* for zlibVersion() */
 #endif
 
+#include "monolithic_examples.h"
+
 namespace
 {
 

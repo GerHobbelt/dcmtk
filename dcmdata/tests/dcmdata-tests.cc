@@ -23,6 +23,8 @@
 
 #include "dcmtk/ofstd/oftest.h"
 
+#include "monolithic_examples.h"
+
 OFTEST_REGISTER(dcmdata_partialElementAccess);
 OFTEST_REGISTER(dcmdata_i2d_bmp);
 OFTEST_REGISTER(dcmdata_checkStringValue);

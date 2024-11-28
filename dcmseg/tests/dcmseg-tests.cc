@@ -23,6 +23,8 @@
 
 #include "dcmtk/ofstd/oftest.h"
 
+#include "monolithic_examples.h"
+
 OFTEST_REGISTER(dcmseg_bigdim);
 OFTEST_REGISTER(dcmseg_utils);
 OFTEST_REGISTER(dcmseg_roundtrip);

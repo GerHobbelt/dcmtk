@@ -44,6 +44,8 @@
 #include <zlib-ng.h>          /* for zlibVersion() */
 #endif
 
+#include "monolithic_examples.h"
+
 #define OFFIS_CONSOLE_DESCRIPTION "Scale DICOM images"
 
 #ifdef BUILD_DCMSCALE_AS_DCMJSCAL

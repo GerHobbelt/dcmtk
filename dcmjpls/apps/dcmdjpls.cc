@@ -37,6 +37,8 @@
 #include "oflice.h"
 #endif
 
+#include "monolithic_examples.h"
+
 #ifndef OFFIS_CONSOLE_APPLICATION
 #define OFFIS_CONSOLE_APPLICATION "dcmdjpls"
 #endif

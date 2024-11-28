@@ -59,6 +59,8 @@ END_EXTERN_C
 
 #include "dcmtk/ofstd/ofstream.h"
 
+#include "monolithic_examples.h"
+
 #define OFFIS_CONSOLE_APPLICATION "dcmpssnd"
 
 static OFLogger dcmpssndLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APPLICATION);

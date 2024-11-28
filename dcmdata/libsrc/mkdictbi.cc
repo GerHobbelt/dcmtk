@@ -29,9 +29,11 @@
 #include "dcmtk/ofstd/ofstd.h"
 #include "dcmtk/dcmdata/dcdicent.h"
 
+#include "monolithic_examples.h"
+
 #define PRIVATE_TAGS_IFNAME "ENABLE_PRIVATE_TAGS"
 
-#if !defined(BUILD_MONOLITHIC)
+#if !defined(BUILD_MONOLITHIC)  // loadBuiltinDictionary() has already been defined elsewhere...
 
 void
 DcmDataDictionary::loadBuiltinDictionary()

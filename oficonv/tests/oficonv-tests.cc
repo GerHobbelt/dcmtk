@@ -24,6 +24,8 @@
 #define OFTEST_OFSTD_ONLY
 #include "dcmtk/ofstd/oftest.h"
 
+#include "monolithic_examples.h"
+
 OFTEST_REGISTER(oficonv_open);
 
 // conversion of the supported single-byte character sets to UTF-8

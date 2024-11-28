@@ -43,6 +43,8 @@
 #include <zlib-ng.h>          /* for zlibVersion() */
 #endif
 
+#include "monolithic_examples.h"
+
 #define OFFIS_CONSOLE_DESCRIPTION "Convert DICOM color images to palette color"
 
 #ifdef BUILD_WITH_DCMJPEG_SUPPORT

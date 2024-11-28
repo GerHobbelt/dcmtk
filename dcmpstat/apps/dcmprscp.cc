@@ -50,6 +50,8 @@ END_EXTERN_C
 #include <zlib-ng.h>        /* for zlibVersion() */
 #endif
 
+#include "monolithic_examples.h"
+
 #define OFFIS_CONSOLE_APPLICATION "dcmprscp"
 
 static OFLogger dcmprscpLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APPLICATION);

@@ -22,9 +22,12 @@
 #include "dcmtk/config/osconfig.h"
 #include "dcmtk/ofstd/oftest.h"
 
+#include "monolithic_examples.h"
+
 OFTEST_REGISTER(dcmect_huge_concat);
 OFTEST_REGISTER(dcmect_overflow);
 OFTEST_REGISTER(dcmect_roundtrip);
+
 #if defined(BUILD_MONOLITHIC)
 #define main dcmtk_dcmect_tests_main
 #endif

@@ -59,6 +59,8 @@ END_EXTERN_C
 #include "dcmtk/dcmnet/dul.h"
 #include "dcmtk/dcmnet/diutil.h"
 
+#include "monolithic_examples.h"
+
 #define OFFIS_CONSOLE_APPLICATION "msgserv"
 
 static OFLogger msgservLogger = OFLog::getLogger("dcmtk.test." OFFIS_CONSOLE_APPLICATION);

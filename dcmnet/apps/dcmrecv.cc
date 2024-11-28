@@ -31,6 +31,8 @@
 #include "dcmtk/dcmnet/dstorscp.h"   /* for DcmStorageSCP */
 #include "dcmtk/dcmtls/tlsopt.h"     /* for DcmTLSOptions */
 
+#include "monolithic_examples.h"
+
 
 /* general definitions */
 

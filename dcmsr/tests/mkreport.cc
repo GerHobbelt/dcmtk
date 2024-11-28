@@ -28,6 +28,8 @@
 
 #include "dcmtk/dcmdata/dctk.h"       /* for typical set of "dcmdata" headers */
 
+#include "monolithic_examples.h"
+
 
 // forward declarations
 static void generate_ki(DSRDocument *doc, OFString &studyUID_ki);

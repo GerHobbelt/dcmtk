@@ -30,6 +30,8 @@
 #include "dcmtk/dcmwlm/wlds.h"
 #include "dcmtk/dcmwlm/wldsfs.h"
 
+#include "monolithic_examples.h"
+
 #define OFFIS_CONSOLE_APPLICATION "wlmscpfs"
 
 #if defined(BUILD_MONOLITHIC)

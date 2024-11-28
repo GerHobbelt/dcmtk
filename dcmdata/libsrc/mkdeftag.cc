@@ -27,6 +27,8 @@
 #include "dcmtk/ofstd/ofstd.h"
 #include "dcmtk/dcmdata/dcdicent.h"
 
+#include "monolithic_examples.h"
+
 static char*
 convertToIdentifier(char* s)
 {

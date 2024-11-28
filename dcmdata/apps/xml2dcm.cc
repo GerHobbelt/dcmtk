@@ -34,6 +34,8 @@
 #include <zlib-ng.h>                     /* for zlibVersion() */
 #endif
 
+#include "monolithic_examples.h"
+
 #define OFFIS_CONSOLE_APPLICATION "xml2dcm"
 #define OFFIS_CONSOLE_DESCRIPTION "Convert XML document to DICOM file or data set"
 
@@ -380,7 +382,12 @@ int main(int argc, const char **argv)
 
 #else /* WITH_LIBXML */
 
-int main(int, char *[])
+#if defined(BUILD_MONOLITHIC)
+#define main dcmtk_xml2dcm_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
   CERR << rcsid << OFendl << OFFIS_CONSOLE_DESCRIPTION << OFendl << OFendl
        << OFFIS_CONSOLE_APPLICATION " requires the libxml library." << OFendl

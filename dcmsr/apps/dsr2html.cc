@@ -37,6 +37,8 @@
 #include "dcmtk/ofstd/ofchrenc.h"     /* for OFCharacterEncoding */
 #endif
 
+#include "monolithic_examples.h"
+
 #define OFFIS_CONSOLE_APPLICATION "dsr2html"
 
 static OFLogger dsr2htmlLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APPLICATION);

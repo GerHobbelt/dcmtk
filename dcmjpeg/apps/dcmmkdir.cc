@@ -79,6 +79,8 @@
 #include <zlib-ng.h>         /* for zlibVersion() */
 #endif
 
+#include "monolithic_examples.h"
+
 #ifdef BUILD_DCMGPDIR_AS_DCMMKDIR
 #define OFFIS_CONSOLE_APPLICATION "dcmmkdir"
 #define OFFIS_CONSOLE_DESCRIPTION "Create a DICOMDIR file"

@@ -67,6 +67,8 @@ BEGIN_EXTERN_C
 #endif
 END_EXTERN_C
 
+#include "monolithic_examples.h"
+
 #define OFFIS_OUTFILE_DESCRIPTION "output filename to be written (default: stdout)"
 
 #ifdef BUILD_DCM2IMG_AS_DCM2KIMG

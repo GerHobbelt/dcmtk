@@ -62,6 +62,8 @@ BEGIN_EXTERN_C
 #include <openssl/evp.h> /* for OPENSSL_NO_EC */
 END_EXTERN_C
 
+#include "monolithic_examples.h"
+
 
 // ********************************************
 

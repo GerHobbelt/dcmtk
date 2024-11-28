@@ -41,6 +41,8 @@
 #include <zlib-ng.h>                    /* for zlibVersion() */
 #endif
 
+#include "monolithic_examples.h"
+
 #if defined (HAVE_WINDOWS_H) || defined(HAVE_FNMATCH_H)
 #define PATTERN_MATCHING_AVAILABLE
 #endif

@@ -36,6 +36,8 @@
 #include <zlib-ng.h>
 #endif
 
+#include "monolithic_examples.h"
+
 // ----------------------------------------------------------------------------
 
 #define OFFIS_CONSOLE_APPLICATION "termscu"

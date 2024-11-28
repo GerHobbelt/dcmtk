@@ -29,6 +29,8 @@
 #include "dcmtk/dcmdata/dcuid.h"    /* for dcmtk version name */
 #include <cstring>
 
+#include "monolithic_examples.h"
+
 
 #define OFFIS_CONSOLE_APPLICATION "dcod2lum"
 

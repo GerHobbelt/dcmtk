@@ -37,6 +37,8 @@
 #include <zlib-ng.h>                     /* for zlibVersion() */
 #endif
 
+#include "monolithic_examples.h"
+
 #ifdef PRIVATE_ECHOSCU_DECLARATIONS
 PRIVATE_ECHOSCU_DECLARATIONS
 #else

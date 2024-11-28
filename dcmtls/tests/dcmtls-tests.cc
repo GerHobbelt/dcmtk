@@ -22,6 +22,8 @@
 #include "dcmtk/config/osconfig.h"
 #include "dcmtk/ofstd/oftest.h"
 
+#include "monolithic_examples.h"
+
 OFTEST_REGISTER(dcmtls_scp_tls);
 OFTEST_REGISTER(dcmtls_scp_pool_tls);
 

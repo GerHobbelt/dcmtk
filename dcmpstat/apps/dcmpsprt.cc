@@ -40,6 +40,8 @@
 #include <zlib-ng.h>        /* for zlibVersion() */
 #endif
 
+#include "monolithic_examples.h"
+
 #define OFFIS_CONSOLE_APPLICATION "dcmpsprt"
 
 static OFLogger dcmpsprtLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APPLICATION);

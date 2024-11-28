@@ -33,6 +33,8 @@
 #include <zlib-ng.h>        /* for zlibVersion() */
 #endif
 
+#include "monolithic_examples.h"
+
 #define OFFIS_CONSOLE_APPLICATION "dcmmkcrv"
 
 static OFLogger dcmmkcrvLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APPLICATION);

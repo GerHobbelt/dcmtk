@@ -23,6 +23,8 @@
 
 #include "dcmtk/ofstd/oftest.h"
 
+#include "monolithic_examples.h"
+
 OFTEST_REGISTER(dcmrt_search);
 OFTEST_REGISTER(dcmrt_contour);
 

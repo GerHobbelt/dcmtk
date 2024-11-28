@@ -36,6 +36,8 @@
 #include "dcmtk/ofstd/ofchrenc.h"       /* for OFCharacterEncoding */
 #endif
 
+#include "monolithic_examples.h"
+
 #define OFFIS_CONSOLE_APPLICATION "dcm2json"
 #define OFFIS_CONSOLE_DESCRIPTION "Convert DICOM file and data set to JSON"
 

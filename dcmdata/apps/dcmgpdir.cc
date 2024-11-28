@@ -22,6 +22,8 @@
 #include "dcmtk/config/osconfig.h"    /* make sure OS specific configuration is included first */
 #include "dcmtk/ofstd/ofstub.h"
 
+#include "monolithic_examples.h"
+
 #if defined(BUILD_MONOLITHIC)
 #define main dcmtk_dcmgpdir_main
 #endif

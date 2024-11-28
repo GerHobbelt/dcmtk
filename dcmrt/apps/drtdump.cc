@@ -29,6 +29,8 @@
 #include <zlib-ng.h>        /* for zlibVersion() */
 #endif
 
+#include "monolithic_examples.h"
+
 #define OFFIS_CONSOLE_APPLICATION "drtdump"
 
 static OFLogger drtdumpLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APPLICATION);

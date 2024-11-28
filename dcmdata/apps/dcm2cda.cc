@@ -32,6 +32,8 @@
 #include <zlib-ng.h>        /* for zlibVersion() */
 #endif
 
+#include "monolithic_examples.h"
+
 #define OFFIS_CONSOLE_APPLICATION "dcm2cda"
 
 static OFLogger dcm2cdaLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APPLICATION);

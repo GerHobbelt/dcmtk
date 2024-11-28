@@ -23,6 +23,8 @@
 #include "mdfconen.h"
 #include "dcmtk/dcmdata/dcpath.h"
 
+#include "monolithic_examples.h"
+
 #define OFFIS_CONSOLE_APPLICATION "dcmodify"
 
 static OFLogger dcmodifyLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APPLICATION);

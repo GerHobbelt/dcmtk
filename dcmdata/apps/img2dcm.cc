@@ -35,6 +35,8 @@
 #include "dcmtk/dcmdata/libi2d/i2dplop.h"
 #include "dcmtk/dcmdata/dcmxml/xml2dcm.h"
 
+#include "monolithic_examples.h"
+
 #define OFFIS_CONSOLE_APPLICATION "img2dcm"
 static char rcsid[] = "$dcmtk: " OFFIS_CONSOLE_APPLICATION " v" OFFIS_DCMTK_VERSION " " OFFIS_DCMTK_RELEASEDATE " $";
 

@@ -23,6 +23,8 @@
 
 #include "dcmtk/ofstd/oftest.h"
 
+#include "monolithic_examples.h"
+
 OFTEST_REGISTER(dcmfg_concatenation_creator);
 OFTEST_REGISTER(dcmfg_concatenation_creator_fail);
 OFTEST_REGISTER(dcmfg_concatenation_loader);

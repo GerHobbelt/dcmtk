@@ -63,6 +63,8 @@ END_EXTERN_C
 #include <zlib-ng.h>        /* for zlibVersion() */
 #endif
 
+#include "monolithic_examples.h"
+
 // we assume that the inetd super server is available on all non-Windows systems
 #ifndef _WIN32
 #define INETD_AVAILABLE

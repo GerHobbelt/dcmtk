@@ -22,6 +22,8 @@
 #include "dcmtk/config/osconfig.h"
 #include "dcmtk/ofstd/oftest.h"
 
+#include "monolithic_examples.h"
+
 OFTEST_REGISTER(dcmiod_component_check_invalid_chars);
 OFTEST_REGISTER(dcmiod_component_check_max_length_violated);
 OFTEST_REGISTER(dcmiod_component_check_missing_value);
@@ -30,6 +32,7 @@ OFTEST_REGISTER(dcmiod_component_check_vr_violated);
 OFTEST_REGISTER(dcmiod_codes);
 OFTEST_REGISTER(dcmiod_imagepixel);
 OFTEST_REGISTER(dcmiod_tcielabutil);
+
 #if defined(BUILD_MONOLITHIC)
 #define main dcmtk_dcmiod_tests_main
 #endif

@@ -34,6 +34,8 @@
 #include "dcmtk/ofstd/ofstd.h"
 #include "dcmtk/dcmdata/dcuid.h"    /* for dcmtk version name */
 
+#include "monolithic_examples.h"
+
 static char rcsid[] = "$dcmtk: wltest v"
   OFFIS_DCMTK_VERSION " " OFFIS_DCMTK_RELEASEDATE " $";
 

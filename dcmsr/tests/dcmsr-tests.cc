@@ -23,6 +23,8 @@
 
 #include "dcmtk/ofstd/oftest.h"
 
+#include "monolithic_examples.h"
+
 OFTEST_REGISTER(dcmsr_addItems);
 OFTEST_REGISTER(dcmsr_getItems);
 OFTEST_REGISTER(dcmsr_addTreeNode_1);
