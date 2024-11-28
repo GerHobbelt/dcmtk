@@ -249,6 +249,8 @@ int main(int argc, const char **argv)
     return 0;
 }
 
+#if !defined(BUILD_MONOLITHIC)
+
 void
 DcmDataDictionary::loadBuiltinDictionary()
 {
@@ -259,3 +261,5 @@ DcmDataDictionary::loadBuiltinDictionary()
    ** against dcdict.cc.
    */
 }
+
+#endif

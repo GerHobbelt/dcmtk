@@ -68,7 +68,12 @@ extern "C" void TI_signalHandler(int)
   exit( 1 );
 }
 
-int main(int argc, const char *argv[] )
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
   const char *remoteDBTitles[ MAXREMOTEDBTITLES ];
   int remoteDBTitlesCount = 0;

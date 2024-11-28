@@ -31,6 +31,8 @@
 
 #define PRIVATE_TAGS_IFNAME "ENABLE_PRIVATE_TAGS"
 
+#if !defined(BUILD_MONOLITHIC)
+
 void
 DcmDataDictionary::loadBuiltinDictionary()
 {
@@ -41,6 +43,8 @@ DcmDataDictionary::loadBuiltinDictionary()
    ** against dcdict.cc.
    */
 }
+
+#endif
 
 static const char*
 rr2s(DcmDictRangeRestriction rr)
@@ -103,7 +107,12 @@ printSimpleEntry(FILE* fout, const DcmDictEntry* e, OFBool& isFirst, OFBool& isP
       fprintf(fout, "      NULL }\n");
 }
 
-int main(int argc, const char* argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
     const char* progname;
     const char* filename = NULL;

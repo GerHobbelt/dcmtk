@@ -32,7 +32,12 @@
 
 #define OFFIS_CONSOLE_APPLICATION "wlmscpfs"
 
-int main(int argc, const char *argv[] )
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
   // Initialize object which provides a connection to the data source
   WlmDataSourceFileSystem *dataSource = new WlmDataSourceFileSystem();

@@ -41,6 +41,9 @@
 #include <zlib-ng.h>     /* for zlibVersion() */
 #endif
 
+namespace
+{
+
 #define OFFIS_CONSOLE_APPLICATION "movescu"
 
 static OFLogger movescuLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APPLICATION);
@@ -213,7 +216,12 @@ addPresentationContext(T_ASC_Parameters *params,
 #define SHORTCOL 4
 #define LONGCOL 21
 
-int main(int argc, const char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
   T_ASC_Parameters *params = NULL;
   const char *opt_peer = NULL;
@@ -1745,4 +1753,6 @@ cmove(T_ASC_Association *assoc, const char *fname)
     while (cond.good() && n--)
         cond = moveSCU(assoc, fname);
     return cond;
+}
+
 }

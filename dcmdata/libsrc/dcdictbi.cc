@@ -32590,6 +32590,7 @@ DcmDataDictionary::loadBuiltinDictionary()
 
 
 #else // DCM_DICT_DEFAULT == DCM_DICT_DEFAULT_USE_BUILTIN
+
 void
 DcmDataDictionary::loadBuiltinDictionary()
 {

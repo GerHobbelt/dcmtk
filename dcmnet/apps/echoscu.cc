@@ -131,7 +131,12 @@ static const char* transferSyntaxes[] = {
 #define SHORTCOL 4
 #define LONGCOL 19
 
-int main(int argc, const char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
   OFOStringStream optStream;
   int result = EXITCODE_NO_ERROR;

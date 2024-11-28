@@ -48,7 +48,12 @@ static OFLogger termscuLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APP
 
 // ----------------------------------------------------------------------------
 
-int main(int argc, const char *argv[] )
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 // Date       : September 12, 2005
 // Author     : Thomas Wilkens
 // Task       : Main function for this application.

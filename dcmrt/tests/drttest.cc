@@ -33,7 +33,12 @@
 #define RTTREAT_FILENAME  "/share/dicom/images/dkfz-rt/rt_set_20090707/RT_RECORD/SER01/IMG004"
 
 
-int main()
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(void)
 {
     OFCondition status;
     DcmFileFormat fileformat;

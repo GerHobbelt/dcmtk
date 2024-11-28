@@ -33,6 +33,9 @@
 #include <zlib-ng.h>                     /* for zlibVersion() */
 #endif
 
+namespace
+{
+
 #define OFFIS_CONSOLE_APPLICATION "getscu"
 
 static OFLogger getscuLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APPLICATION);
@@ -79,7 +82,12 @@ static void applyOverrideKeys(DcmDataset *dataset);
 #define SHORTCOL 4
 #define LONGCOL 21
 
-int main(int argc, const char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
   const char *opt_peer = NULL;
   OFCmdUnsignedInt opt_port = 104;;
@@ -637,4 +645,6 @@ static void prepareTS(E_TransferSyntax ts,
   }
   // Always propose Little Endian Implicit
   syntaxes.push_back(UID_LittleEndianImplicitTransferSyntax);
+}
+
 }

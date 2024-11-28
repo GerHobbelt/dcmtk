@@ -872,7 +872,12 @@ cleanup:
 
 #else /* WITH_OPENSSL */
 
-int main(int, char *[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
   CERR << rcsid << OFendl << APPLICATION_ABSTRACT << OFendl << OFendl
        << OFFIS_CONSOLE_APPLICATION " requires the OpenSSL library." << OFendl

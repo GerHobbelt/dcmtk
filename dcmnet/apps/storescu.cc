@@ -69,6 +69,9 @@ END_EXTERN_C
 #define PATTERN_MATCHING_AVAILABLE
 #endif
 
+namespace
+{
+
 #define OFFIS_CONSOLE_APPLICATION "storescu"
 
 static OFLogger storescuLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APPLICATION);
@@ -1622,4 +1625,6 @@ checkUserIdentityResponse(T_ASC_Parameters *params)
     }
   }
   return EC_Normal;
+}
+
 }

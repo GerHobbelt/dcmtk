@@ -68,6 +68,8 @@ END_EXTERN_C
 #define INETD_AVAILABLE
 #endif
 
+namespace
+{
 
 #ifdef PRIVATE_STORESCP_DECLARATIONS
 PRIVATE_STORESCP_DECLARATIONS
@@ -2659,4 +2661,6 @@ static OFCondition acceptUnknownContextsWithPreferredTransferSyntaxes(
     if (cond.bad()) return cond;
   }
   return cond;
+}
+
 }
