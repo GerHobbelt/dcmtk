@@ -64,7 +64,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 // IN THE SOFTWARE.
 
-static OFString argvToCommandLine(int argc, char** argv)
+static OFString argvToCommandLine(int argc, const char** argv)
 {
     OFString result;
     for (int i = 0; i < argc; ++i)
@@ -148,7 +148,7 @@ extern char** environ; // required to exist by the Single Unix Specification
 #endif /* _WIN32 */
 
 
-int OFstub_main(int argc, char** argv, const char *stubName, const char *appName)
+int OFstub_main(int argc, const char** argv, const char *stubName, const char *appName)
 {
     if ((argv==NULL) || (stubName==NULL) || (appName==NULL))
     {

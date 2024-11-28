@@ -303,7 +303,12 @@ static OFCondition writeFile(STD_NAMESPACE ostream &out,
 #define LONGCOL 20
 
 
-int main(int argc, char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
     size_t opt_writeFlags = 0;
     OFBool opt_loadIntoMemory = OFFalse;

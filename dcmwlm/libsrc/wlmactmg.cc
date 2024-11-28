@@ -115,7 +115,7 @@ WlmActivityManager::WlmActivityManager(
     int opt_acse_timeoutv,
     OFBool opt_forkedChildv,
     int argcv,
-    char *argvv[] )
+		const char *argvv[] )
 // Date         : December 10, 2001
 // Author       : Thomas Wilkens
 // Task         : Constructor.

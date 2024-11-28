@@ -66,7 +66,7 @@ class DCMTK_DCMWLM_EXPORT WlmActivityManager
     /// number of arguments in commandline, needed for multiprocess mode on WIN32
     int cmd_argc;
     /// complete command line, needed for multiprocess mode on WIN32
-    char **cmd_argv;
+		const char **cmd_argv;
     /// maximum number of association for non-single process mode
     int opt_maxAssociations;
     /// blocking mode for DIMSE operations
@@ -215,7 +215,7 @@ class DCMTK_DCMWLM_EXPORT WlmActivityManager
         int opt_acse_timeoutv,
         OFBool opt_forkedChildv = OFFalse,
         int argcv = 0,
-        char *argvv[] = NULL );
+				const char *argvv[] = NULL );
 
       /** destructor
        */

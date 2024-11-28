@@ -73,7 +73,12 @@ static DcmTagKey parseTagKey(const char *tagName)
   }
 }
 
-int main(int argc, char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
   const char *opt_ifname = NULL;
   const char *opt_ofname = NULL;

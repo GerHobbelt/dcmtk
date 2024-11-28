@@ -197,7 +197,12 @@ extern "C" void sigChildHandler(int)
 #define SHORTCOL 4
 #define LONGCOL 21
 
-int main(int argc, char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
   T_ASC_Network *net;
   DcmAssociationConfiguration asccfg;

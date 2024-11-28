@@ -103,10 +103,9 @@ printSimpleEntry(FILE* fout, const DcmDictEntry* e, OFBool& isFirst, OFBool& isP
       fprintf(fout, "      NULL }\n");
 }
 
-int
-main(int argc, char* argv[])
+int main(int argc, const char* argv[])
 {
-    char* progname;
+    const char* progname;
     const char* filename = NULL;
     FILE* fout = NULL;
     DcmDictEntry* e = NULL;

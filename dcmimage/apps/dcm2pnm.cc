@@ -22,7 +22,12 @@
 #include "dcmtk/config/osconfig.h"    /* make sure OS specific configuration is included first */
 #include "dcmtk/ofstd/ofstub.h"
 
-int main(int argc, char** argv)
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
     return OFstub_main(argc, argv, "dcm2pnm", "dcm2img");
 }

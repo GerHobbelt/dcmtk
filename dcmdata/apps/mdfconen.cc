@@ -58,7 +58,7 @@ MdfJob &MdfJob::operator=(const MdfJob &j)
 }
 
 
-MdfConsoleEngine::MdfConsoleEngine(int argc, char *argv[],
+MdfConsoleEngine::MdfConsoleEngine(int argc, const char *argv[],
                                    const char *application_name)
   : app(NULL), cmd(NULL), ds_man(NULL), ignore_errors_option(OFFalse),
     update_metaheader_uids_option(OFTrue), no_backup_option(OFFalse),

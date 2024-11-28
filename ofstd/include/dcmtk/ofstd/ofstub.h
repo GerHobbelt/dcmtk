@@ -38,10 +38,10 @@
  *  @return value to be returned from main(). If the command line tool given as appName
  *    cannot be executed, returns an error code. Otherwise, on Posix platform, this
  *    function will never returns, as it calls execve(). The calling process will instead
- *    receive the return code of the callled tool. On Windows, the function will wait
+ *    receive the return code of the called tool. On Windows, the function will wait
  *    until the child process terminates and will then return the child process's
  *    return code. In any case, the stub can simply return the result of this function.
  */
-DCMTK_OFSTD_EXPORT int OFstub_main(int argc, char** argv, const char *stubName, const char *appName);
+DCMTK_OFSTD_EXPORT int OFstub_main(int argc, const char** argv, const char *stubName, const char *appName);
 
 #endif // #ifndef OFSTUB_H

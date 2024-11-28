@@ -28,4 +28,8 @@ OFTEST_REGISTER(dcmseg_utils);
 OFTEST_REGISTER(dcmseg_roundtrip);
 OFTEST_REGISTER(dcmseg_concat_binary);
 
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
 OFTEST_MAIN("dcmseg")

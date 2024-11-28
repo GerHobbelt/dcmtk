@@ -645,7 +645,12 @@ static OFCondition createLUT(const unsigned int numberOfBits,
 #define SHORTCOL 3
 #define LONGCOL 14
 
-int main(int argc, char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
     const char *opt_inName = NULL;                     /* in file name */
     const char *opt_outName = NULL;                    /* out file name */

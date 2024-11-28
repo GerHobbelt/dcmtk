@@ -62,7 +62,12 @@ const char *all_reports[num_reports] = {"mkreport",
                                         "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19"};
 
 
-int main(int argc, char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
     if (argc < 2)
     {

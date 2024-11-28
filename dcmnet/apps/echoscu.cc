@@ -131,8 +131,7 @@ static const char* transferSyntaxes[] = {
 #define SHORTCOL 4
 #define LONGCOL 19
 
-int
-main(int argc, char *argv[])
+int main(int argc, const char *argv[])
 {
   OFOStringStream optStream;
   int result = EXITCODE_NO_ERROR;

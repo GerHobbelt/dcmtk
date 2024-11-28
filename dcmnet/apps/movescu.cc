@@ -213,8 +213,7 @@ addPresentationContext(T_ASC_Parameters *params,
 #define SHORTCOL 4
 #define LONGCOL 21
 
-int
-main(int argc, char *argv[])
+int main(int argc, const char *argv[])
 {
   T_ASC_Parameters *params = NULL;
   const char *opt_peer = NULL;

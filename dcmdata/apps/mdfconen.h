@@ -73,7 +73,7 @@ public:
      *                   this class
      */
     MdfConsoleEngine(int argc,
-                     char *argv[],
+										 const char *argv[],
                      const char *appl_name);
 
     /** Destructor

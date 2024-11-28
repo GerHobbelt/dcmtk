@@ -96,7 +96,7 @@ OFBool OFConsoleApplication::checkParseStatus(const OFCommandLine::E_ParseStatus
 
 OFBool OFConsoleApplication::parseCommandLine(OFCommandLine &cmd,
                                               int argCount,
-                                              char *argValue[],
+																							const char *argValue[],
                                               const int flags,
                                               const int startPos)
 {

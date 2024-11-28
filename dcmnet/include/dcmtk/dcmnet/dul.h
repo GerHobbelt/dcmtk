@@ -574,7 +574,7 @@ DCMTK_DCMNET_EXPORT OFCondition DUL_readSocketHandleAsForkedChild();
  *     on Win32, where the child process is created with CreateProcess and the
  *     command line parameters have to be passed from parent to child.
  */
-DCMTK_DCMNET_EXPORT void DUL_requestForkOnTransportConnectionReceipt(int argc, char *argv[]);
+DCMTK_DCMNET_EXPORT void DUL_requestForkOnTransportConnectionReceipt(int argc, const char *argv[]);
 
 /** this function sets a flag in the association that the current process
  *  is the parent process after a fork() operation and that the association

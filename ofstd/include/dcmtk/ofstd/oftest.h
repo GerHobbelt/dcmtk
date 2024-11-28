@@ -241,7 +241,7 @@ public:
      *  @param module name of the module that we are testing for
      *  @return 0 in case of success, else an error value.
      */
-    int run(int argc, char* argv[], const char* module)
+    int run(int argc, const char* argv[], const char* module)
     {
         OFList<OFTestTest*> testsToRun;
         OFBool listOnly = OFFalse;
@@ -458,7 +458,8 @@ private:
  *  @param module the name of the module which is under test.
  */
 #define OFTEST_MAIN(module) \
-int main(int argc, char* argv[]) \
+extern "C" \
+int main(int argc, const char **argv) \
 { \
     return OFTestManager::instance().run(argc, argv, module); \
 }

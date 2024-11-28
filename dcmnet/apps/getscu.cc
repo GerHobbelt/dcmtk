@@ -79,8 +79,7 @@ static void applyOverrideKeys(DcmDataset *dataset);
 #define SHORTCOL 4
 #define LONGCOL 21
 
-int
-main(int argc, char *argv[])
+int main(int argc, const char *argv[])
 {
   const char *opt_peer = NULL;
   OFCmdUnsignedInt opt_port = 104;;

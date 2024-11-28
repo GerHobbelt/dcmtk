@@ -93,7 +93,7 @@ class WlmConsoleEngineFileSystem
     /// number of command line arguments, needed for multiprocess mode on WIN32
     int command_argc;
     /// complete command line, needed for multiprocess mode on WIN32
-    char **command_argv;
+		const char **command_argv;
     /// data source which shall be queried on incoming C-Find RQ messages
     WlmDataSource *dataSource;
 
@@ -115,7 +115,7 @@ class WlmConsoleEngineFileSystem
        *  @param applicationName The name of this application.
        *  @param dataSourcev     Object which provides access to the data source.
        */
-    WlmConsoleEngineFileSystem( int argc, char *argv[], const char *applicationName, WlmDataSource *dataSourcev );
+    WlmConsoleEngineFileSystem( int argc, const char *argv[], const char *applicationName, WlmDataSource *dataSourcev );
 
       /** destructor
        */

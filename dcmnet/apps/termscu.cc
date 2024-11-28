@@ -48,7 +48,7 @@ static OFLogger termscuLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APP
 
 // ----------------------------------------------------------------------------
 
-int main( int argc, char *argv[] )
+int main(int argc, const char *argv[] )
 // Date       : September 12, 2005
 // Author     : Thomas Wilkens
 // Task       : Main function for this application.

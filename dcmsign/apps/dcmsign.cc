@@ -79,7 +79,12 @@ enum DcmSignOperation
 #define SHORTCOL 4
 #define LONGCOL 21
 
-int main(int argc, char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
   DcmSignature::initializeLibrary(); // initialize dcmsign
   const char *                  opt_certfile = NULL;

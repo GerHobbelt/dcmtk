@@ -57,7 +57,7 @@ static OFLogger wlmscpfsLogger = OFLog::getLogger("dcmtk.apps.wlmscpfs");
 
 // ----------------------------------------------------------------------------
 
-WlmConsoleEngineFileSystem::WlmConsoleEngineFileSystem( int argc, char *argv[], const char *applicationName, WlmDataSource *dataSourcev )
+WlmConsoleEngineFileSystem::WlmConsoleEngineFileSystem( int argc, const char *argv[], const char *applicationName, WlmDataSource *dataSourcev )
 // Date         : December 17, 2001
 // Author       : Thomas Wilkens
 // Task         : Constructor.

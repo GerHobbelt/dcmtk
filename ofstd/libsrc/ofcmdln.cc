@@ -1310,7 +1310,7 @@ OFCommandLine::E_ParseStatus OFCommandLine::parseArgumentList(OFList<OFString> &
 
 
 OFCommandLine::E_ParseStatus OFCommandLine::parseLine(int argCount,
-                                                      char *argValue[],
+																											const char *argValue[],
                                                       const int flags,
                                                       const int startPos)
 {
@@ -1350,7 +1350,7 @@ OFCommandLine::E_ParseStatus OFCommandLine::parseLine(int argCount,
 
 // Windows-specific version with wide character strings (UTF-16)
 OFCommandLine::E_ParseStatus OFCommandLine::parseLine(int argCount,
-                                                      wchar_t *argValue[],
+																											const wchar_t *argValue[],
                                                       const int flags,
                                                       const int startPos)
 {

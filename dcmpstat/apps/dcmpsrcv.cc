@@ -740,7 +740,12 @@ static void terminateAllReceivers(DVConfiguration& dvi)
 #define SHORTCOL 3
 #define LONGCOL 12
 
-int main(int argc, char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
     OFStandard::initializeNetwork();
 #ifdef WITH_OPENSSL

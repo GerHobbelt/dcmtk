@@ -398,7 +398,12 @@ static OFCondition dumpFile(STD_NAMESPACE ostream &out,
 #define LONGCOL 20
 
 
-int main(int argc, char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
     OFBool opt_printFilename = OFFalse;
     E_FileReadMode opt_readMode = ERM_autoDetect;

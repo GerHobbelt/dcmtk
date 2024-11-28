@@ -107,7 +107,12 @@ printDefined(FILE* fout, const DcmDictEntry* e)
     fputs("\n", fout);
 }
 
-int main(int argc, char* argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
     const char* progname = "mkdeftag";
     const char* filename = NULL;

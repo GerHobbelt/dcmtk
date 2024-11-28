@@ -37,4 +37,8 @@ OFTEST_REGISTER(dcmfg_fgbase_fgunknown);
 OFTEST_REGISTER(dcmfg_frame_content);
 OFTEST_REGISTER(dcmfg_irradiation_event_identification);
 
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
 OFTEST_MAIN("dcmfg")

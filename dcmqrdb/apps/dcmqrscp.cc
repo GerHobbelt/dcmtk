@@ -105,8 +105,7 @@ static void mangleAssociationProfileKey(OFString& key)
   }
 }
 
-int
-main(int argc, char *argv[])
+int main(int argc, const char *argv[])
 {
   OFString opt_configFileName = OFStandard::getDefaultConfigurationDir();
   opt_configFileName += "dcmqrscp.cfg";

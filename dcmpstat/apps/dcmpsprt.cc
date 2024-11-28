@@ -102,7 +102,12 @@ static int addOverlay(const char *filename,
 #define SHORTCOL 2
 #define LONGCOL 21
 
-int main(int argc, char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
     const char *              opt_printerID = NULL;             /* printer ID */
     const char *              opt_cfgName = NULL;               /* config read file name */

@@ -37,8 +37,8 @@
 static char rcsid[] = "$dcmtk: wltest v"
   OFFIS_DCMTK_VERSION " " OFFIS_DCMTK_RELEASEDATE " $";
 
-char* progname = NULL;
-OFBool verbose = OFFalse;
+static const char* progname = NULL;
+static OFBool verbose = OFFalse;
 
 static void
 shortusage()
@@ -84,7 +84,7 @@ static void errmsg(const char* msg, ...)
 
 
 static void
-addOverrideKey(DcmDataset& overrideKeys, char* s)
+addOverrideKey(DcmDataset& overrideKeys, const char* s)
 {
     unsigned int g = 0xffff;
     unsigned int e = 0xffff;
@@ -128,7 +128,12 @@ queryWorklistDB(WlmDataSourceFileSystem& wdb,
     const char* queryFilename, DcmDataset& overrideKeys);
 
 
-int main(int argc, char* argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
     int i = 0;
     int j = 0;
@@ -202,7 +207,7 @@ int main(int argc, char* argv[])
         }
     }
 
-    char* dbPath = argv[i];
+		const char* dbPath = argv[i];
     i++;
 
     WlmDataSourceFileSystem wdb;
@@ -210,7 +215,7 @@ int main(int argc, char* argv[])
     wdb.ConnectToDataSource();
 
     for (j=i; j<argc; j++) {
-        char* queryFilename = argv[j];
+			  const char* queryFilename = argv[j];
 
         queryWorklistDB(wdb, queryFilename, overrideKeys);
     }

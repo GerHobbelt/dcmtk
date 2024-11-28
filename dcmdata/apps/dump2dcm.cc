@@ -782,7 +782,12 @@ readDumpFile(DcmMetaInfo *metaheader, DcmDataset *dataset,
 
 // ********************************************
 
-int main(int argc, char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
 
     OFConsoleApplication app(OFFIS_CONSOLE_APPLICATION , "Convert ASCII dump to DICOM file", rcsid);

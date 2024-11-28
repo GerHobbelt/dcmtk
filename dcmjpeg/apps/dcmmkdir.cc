@@ -103,6 +103,10 @@ static OFLogger dcmgpdirLogger = OFLog::getLogger("dcmtk.dcmdata." OFFIS_CONSOLE
 // ********************************************
 
 // this macro either expands to main() or wmain()
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
 DCMTK_MAIN_FUNCTION
 {
     OFBool opt_write = OFTrue;

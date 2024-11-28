@@ -126,4 +126,9 @@ OFTEST_REGISTER(dcmdata_xferLookup_2);
 OFTEST_REGISTER(dcmdata_xferLookup_3);
 OFTEST_REGISTER(dcmdata_xferLookup_4);
 OFTEST_REGISTER(dcmdata_putOFStringAtPos);
+
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
 OFTEST_MAIN("dcmdata")

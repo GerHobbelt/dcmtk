@@ -25,4 +25,9 @@
 
 OFTEST_REGISTER(dcmrt_search);
 OFTEST_REGISTER(dcmrt_contour);
+
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
 OFTEST_MAIN("dcmrt")

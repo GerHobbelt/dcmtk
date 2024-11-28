@@ -75,7 +75,7 @@ class DCMTK_OFSTD_EXPORT OFConsoleApplication
      */
     OFBool parseCommandLine(OFCommandLine &cmd,
                             int argCount,
-                            char *argValue[],
+														const char *argValue[],
                             const int flags = 0,
                             const int startPos = 1);
 

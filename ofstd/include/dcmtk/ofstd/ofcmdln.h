@@ -36,15 +36,15 @@
  *--------------------*/
 
 // Only use wchar_t on windows (not mingw) and don't use it on MSC6
-#if defined(HAVE_WINDOWS_H) && !defined(__MINGW32__) && (!defined(_MSC_VER) || _MSC_VER > 1200)
+#if defined(HAVE_WINDOWS_H) && !defined(__MINGW32__) && (!defined(_MSC_VER) || _MSC_VER > 1200) && !defined(BUILD_MONOLITHIC)
 # define DCMTK_USE_WCHAR_T
 #endif
 #if defined(WIDE_CHAR_MAIN_FUNCTION) && defined(DCMTK_USE_WCHAR_T)
 // Windows-specific version supporting wide character encoding (UTF-16)
-# define DCMTK_MAIN_FUNCTION int wmain(int argc, wchar_t *argv[])
+# define DCMTK_MAIN_FUNCTION int wmain(int argc, const wchar_t *argv[])
 #else
 // default version supporting various character encodings (incl. UTF-8)
-# define DCMTK_MAIN_FUNCTION int main(int argc, char *argv[])
+# define DCMTK_MAIN_FUNCTION int main(int argc, const char *argv[])
 #endif
 
 
@@ -873,7 +873,7 @@ class DCMTK_OFSTD_EXPORT OFCommandLine
      *           the status code PS_ExclusiveOption is returned.
      */
     E_ParseStatus parseLine(int argCount,
-                            char *argValue[],
+														const char *argValue[],
                             const int flags = 0,
                             const int startPos = 1);
 

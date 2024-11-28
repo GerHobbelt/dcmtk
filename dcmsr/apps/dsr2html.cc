@@ -197,7 +197,12 @@ static OFCondition renderFile(STD_NAMESPACE ostream &out,
 #define LONGCOL 22
 
 
-int main(int argc, char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
     size_t opt_readFlags = 0;
     size_t opt_renderFlags = DSRTypes::HF_renderDcmtkFootnote;

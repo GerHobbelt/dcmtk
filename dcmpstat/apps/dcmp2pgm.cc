@@ -417,7 +417,12 @@ static void dumpPresentationState(DVPresentationState &ps)
 #define SHORTCOL 3
 #define LONGCOL 13
 
-int main(int argc, char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
     OFBool opt_dump_pstate     = OFFalse;                 /* default: do not dump presentation state */
     OFBool opt_dicom_mode      = OFFalse;                 /* default: create PGM, not DICOM SC */

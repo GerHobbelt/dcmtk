@@ -673,7 +673,12 @@ static E_FileType getFileTypeByExtension(const char *fname)
     return EFT_BMP;
 }
 
-int main(int argc, char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
     OFConsoleApplication app(OFFIS_CONSOLE_APPLICATION, consoleDescription, rcsid);
     OFCommandLine cmd;

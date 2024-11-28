@@ -52,7 +52,7 @@ static char rcsid[] = "$dcmtk: " OFFIS_CONSOLE_APPLICATION " v"
 #define LONGCOL  12
 
 
-int main (int argc, char *argv[])
+int main(int argc, const char *argv[])
 {
     char sclass [120] ;
     char sinst  [120] ;

@@ -34,7 +34,7 @@
  *  @param argv the argv parameter of main() is passed in this parameter
  *  @param progname program name
  */
-DCMTK_DCMDATA_EXPORT void prepareCmdLineArgs(int& argc, char** argv, const char* progname = "aProgram");
+DCMTK_DCMDATA_EXPORT void prepareCmdLineArgs(int& argc, const char** argv, const char* progname = "aProgram");
 
 #ifdef HAVE_WINDOWS_H
 
@@ -48,7 +48,7 @@ DCMTK_DCMDATA_EXPORT void prepareCmdLineArgs(int& argc, char** argv, const char*
  *  @param argv the argv parameter of main() is passed in this parameter (not used)
  *  @param progname program name (not used)
  */
-DCMTK_DCMDATA_EXPORT void prepareCmdLineArgs(int& argc, wchar_t** argv, const char* progname = "aProgram");
+DCMTK_DCMDATA_EXPORT void prepareCmdLineArgs(int& argc, const wchar_t** argv, const char* progname = "aProgram");
 
 #endif  // HAVE_WINDOWS_H
 

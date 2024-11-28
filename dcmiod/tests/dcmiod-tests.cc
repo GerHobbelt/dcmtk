@@ -30,4 +30,8 @@ OFTEST_REGISTER(dcmiod_component_check_vr_violated);
 OFTEST_REGISTER(dcmiod_codes);
 OFTEST_REGISTER(dcmiod_imagepixel);
 OFTEST_REGISTER(dcmiod_tcielabutil);
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
 OFTEST_MAIN("dcmiod")

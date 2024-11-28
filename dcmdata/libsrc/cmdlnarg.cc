@@ -39,7 +39,7 @@ END_EXTERN_C
 #include "dcmtk/ofstd/ofstd.h"
 #include "dcmtk/ofstd/ofstream.h"
 
-void prepareCmdLineArgs(int& /* argc */, char** /* argv */,
+void prepareCmdLineArgs(int& /* argc */, const char** /* argv */,
                         const char* /* progname */)
 {
 #ifdef _WIN32
@@ -68,11 +68,11 @@ void prepareCmdLineArgs(int& /* argc */, char** /* argv */,
 
 #ifdef HAVE_WINDOWS_H
 
-void prepareCmdLineArgs(int& argc, wchar_t** /* argv */,
+void prepareCmdLineArgs(int& argc, const wchar_t** /* argv */,
                         const char* progname)
 {
     // value of parameters is ignored anyway
-    char** argv = NULL;
+	  const char** argv = NULL;
     prepareCmdLineArgs(argc, argv, progname);
 }
 

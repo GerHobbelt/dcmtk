@@ -194,7 +194,7 @@ static OFBool processIsForkedChild = OFFalse;
 static OFBool shouldFork = OFFalse;
 
 #ifdef _WIN32
-static char **command_argv = NULL;
+static const char **command_argv = NULL;
 static int command_argc = 0;
 #endif
 
@@ -246,7 +246,7 @@ OFCondition DUL_readSocketHandleAsForkedChild()
 }
 
 
-void DUL_requestForkOnTransportConnectionReceipt(int argc, char *argv[])
+void DUL_requestForkOnTransportConnectionReceipt(int argc, const char *argv[])
 {
   shouldFork = OFTrue;
 #ifdef _WIN32

@@ -140,6 +140,10 @@ static OFBool addPrintTagName(const char *tagName)
 #define LONGCOL 21
 
 // this macro either expands to main() or wmain()
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
 DCMTK_MAIN_FUNCTION
 {
     OFBool loadIntoMemory = OFTrue;

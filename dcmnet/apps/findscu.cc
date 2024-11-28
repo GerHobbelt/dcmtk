@@ -58,7 +58,12 @@ static char rcsid[] = "$dcmtk: " OFFIS_CONSOLE_APPLICATION " v"
 #define SHORTCOL 4
 #define LONGCOL 20
 
-int main(int argc, char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main oiio_XXXXXX_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
     OFOStringStream       optStream;
     OFList<OFString>      fileNameList;
