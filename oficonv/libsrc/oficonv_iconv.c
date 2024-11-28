@@ -380,7 +380,7 @@ const char *OFlocale_charset(iconv_locale_allocation_t *buf)
 #endif
 }
 
-void OFiconv_cleanup()
+void OFiconv_cleanup(void)
 {
   _citrus_csmapper_free();
 }

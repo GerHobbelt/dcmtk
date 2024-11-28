@@ -31,7 +31,7 @@ void set_oficonv_logger_callback(oficonv_logger_callback_t callback)
   logger_callback = callback;
 }
 
-oficonv_logger_callback_t get_oficonv_logger_callback()
+oficonv_logger_callback_t get_oficonv_logger_callback(void)
 {
   return logger_callback;
 }

@@ -429,7 +429,7 @@ _citrus_csmapper_open(struct _citrus_csmapper * * rcsm,
 }
 
 void
-_citrus_csmapper_free()
+_citrus_csmapper_free(void)
 {
     if (maparea)
     {
