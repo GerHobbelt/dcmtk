@@ -234,6 +234,13 @@ int main(int argc, const char **argv)
         return 0;
     }
 
+    // check if the command line contains the --list-profiles option
+    if (tlsOptions.listOfProfilesRequested(cmd))
+    {
+        tlsOptions.printSupportedTLSProfiles(app, COUT);
+        return 0;
+    }
+
     /* general options */
     OFLog::configureFromCommandLine(cmd, app);
     if (cmd.findOption("--verbose-pc"))
