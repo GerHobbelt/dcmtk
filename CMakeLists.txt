@@ -1,9 +1,9 @@
 # Minimum CMake version required
-cmake_minimum_required(VERSION 3.1.3...3.29.2 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.7.0...3.31.2 FATAL_ERROR)
 
 # Declare project
 project(DCMTK)
-if (NOT DEFINED CMAKE_CXX_STANDARD)
+if(NOT DEFINED CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD "11" CACHE STRING "Set C++ standard to be used (98,11,14,17,20)")
 else()
   set(CMAKE_CXX_STANDARD ${CMAKE_CXX_STANDARD} CACHE STRING "Set C++ standard to be used (98,11,14,17,20)")
